@@ -15,7 +15,7 @@ const anotacoesRoutes = require('./routes/anotacoesRoutes');
 
 // Configuração do CORS
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost'],
+  origin: 'https://dashboard-frontend-git-main-digonopereira.vercel.app',
   methods: ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'],
   credentials: true
 }));
@@ -36,5 +36,5 @@ app.use('/api', anotacoesRoutes);
 
 // Iniciar o servidor
 app.listen(3001, () => {
-  console.log('Servidor rodando em http://localhost:3001');
+  console.log('Servidor rodando em ${API_URL}');
 });
