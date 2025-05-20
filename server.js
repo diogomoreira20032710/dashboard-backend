@@ -9,6 +9,13 @@ const definicoesRoutes = require('./routes/definicoes');
 const utilizadorRoutes = require('./routes/utilizador');
 const anotacoesRoutes = require('./routes/anotacoesRoutes');
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,PATCH,OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
+
 
 app.use(cors());
 
