@@ -10,11 +10,9 @@ const utilizadorRoutes = require('./routes/utilizador');
 const anotacoesRoutes = require('./routes/anotacoesRoutes');
 
 
-app.use(cors({
-  origin: 'https://dashboard-frontend-five-beta.vercel.app',
-  methods: ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'],
-  credentials: true
-}));
+app.use(cors());
+
+app.use(express.json());
 
 
 
