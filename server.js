@@ -8,19 +8,10 @@ const funcionariosRoutes = require('./routes/funcionarios');
 const definicoesRoutes = require('./routes/definicoes');
 const utilizadorRoutes = require('./routes/utilizador');
 const anotacoesRoutes = require('./routes/anotacoesRoutes');
-const allowedOrigins = [
-  'https://dashboard-frontend-five-beta.vercel.app',
-  'https://dashboard-frontend-git-main-digonopereira.vercel.app'
-];
+
 
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: 'https://dashboard-frontend-five-beta.vercel.app',
   methods: ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'],
   credentials: true
 }));
